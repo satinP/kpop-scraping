@@ -93,11 +93,5 @@ if current_time > execution_min_hour:
         group['description'] = get_group_descripton(row['relative_url'])
         description_group.append(group)
 
-    for index, row in pd.T.iteritems():
-        group = {}
-        group['id'] = row['id']
-        group['description'] = get_group_descripton(row['relative_url'])
-        description_group.append(group)
-
 #engine_sql.execute("SELECT * FROM kpop").fetchall()
 data_to_db(pd, engine_sql, 'kpop')
